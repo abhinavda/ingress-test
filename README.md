@@ -1,6 +1,7 @@
 # ingress-test
 
 minikube start --driver=docker --cpus 2 --memory 3000
+
 minikube addons enable ingress
 
 cd ~/projects/git/new_projects/ingress-test
@@ -32,7 +33,7 @@ helm list
 
 > minikube ip
 
-
+minikube service web-webapp --url 
 
 ---
 Verify the image is present in the minikube Docker daemon:
@@ -53,4 +54,5 @@ helm :
  docker :
  ---------
  docker stop web
+
  docker rm web
